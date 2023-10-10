@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("service_logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("semenovamodel.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("semenovamodel.tt")]
 
 

@@ -23,6 +23,8 @@ namespace SemenovaAvtoservice
         public ServisePage()
         {
             InitializeComponent();
+            var currentServices = Семенова_avroservisEntities.GetContext().Service.ToList();
+            ServiceListView.ItemsSource = currentServices;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
