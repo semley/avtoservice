@@ -117,6 +117,9 @@
     <Compile Include="ServisePage.xaml.cs">
       <DependentUpon>ServisePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tag.cs">
       <DependentUpon>SemenovaModel.tt</DependentUpon>
     </Compile>
@@ -137,6 +140,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ServisePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -186,16 +193,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\picture.png" />
-    <Content Include="SemenovaModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SemenovaModel.Context.cs</LastGenOutput>
-      <DependentUpon>SemenovaModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="SemenovaModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SemenovaModel.edmx</DependentUpon>
-      <LastGenOutput>SemenovaModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="Услуги автосервиса\diz.jpg" />
     <Resource Include="Услуги автосервиса\rulevoe-upravlenie-avtomobilya.jpg" />
     <Resource Include="Услуги автосервиса\transmission.jpg" />
@@ -216,6 +213,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SemenovaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SemenovaModel.edmx</DependentUpon>
+      <LastGenOutput>SemenovaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SemenovaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SemenovaModel.edmx</DependentUpon>
+      <LastGenOutput>SemenovaModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

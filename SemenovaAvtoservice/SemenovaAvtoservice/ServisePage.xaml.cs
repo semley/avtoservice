@@ -20,6 +20,7 @@ namespace SemenovaAvtoservice
     /// </summary>
     public partial class ServisePage : Page
     {
+        public bool a = false;
         int CountRecords;
         int CountPage;
         int CurrentPage;
@@ -107,11 +108,13 @@ namespace SemenovaAvtoservice
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
+            a = false;
             Manager.MainFrame.Navigate(new AddEditPage(null));
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
+            a = true;
             Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Service));
         }
 
@@ -258,6 +261,11 @@ namespace SemenovaAvtoservice
         private void RightDirButton_Click(object sender, RoutedEventArgs e)
         {
             ChangePage(2, null);
+        }
+
+        private void SignUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new SignUpPage((sender as Button).DataContext as Service));
         }
     }
 }

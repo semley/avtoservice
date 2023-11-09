@@ -12,17 +12,18 @@ namespace SemenovaAvtoservice
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class Семенова_avroservisEntities : DbContext
     {
-
         private static Семенова_avroservisEntities _context;
+
         public static Семенова_avroservisEntities GetContext()
         {
-            if (_context == null)
-                _context = new Семенова_avroservisEntities();
+            if(_context == null )
+                _context=new Семенова_avroservisEntities();
             return _context;
         }
+
 
         public Семенова_avroservisEntities()
             : base("name=Семенова_avroservisEntities")

@@ -103,3 +103,5 @@ C:\Users\Lenovo\Documents\программы\7 лаб\SemenovaAvtoservice\Semeno
 C:\Users\Lenovo\Documents\программы\7 лаб\SemenovaAvtoservice\SemenovaAvtoservice\obj\Debug\SemenovaAvtoservice.csproj.CopyComplete
 C:\Users\Lenovo\Documents\программы\7 лаб\SemenovaAvtoservice\SemenovaAvtoservice\obj\Debug\SemenovaAvtoservice.exe
 C:\Users\Lenovo\Documents\программы\7 лаб\SemenovaAvtoservice\SemenovaAvtoservice\obj\Debug\SemenovaAvtoservice.pdb
+C:\Users\Lenovo\Documents\программы\7 лаб\SemenovaAvtoservice\SemenovaAvtoservice\obj\Debug\SignUpPage.g.cs
+C:\Users\Lenovo\Documents\программы\7 лаб\SemenovaAvtoservice\SemenovaAvtoservice\obj\Debug\SignUpPage.baml

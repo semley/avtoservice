@@ -22,11 +22,17 @@ namespace SemenovaAvtoservice
     {
         private Service _currentServise = new Service();
 
+        public bool a = false;
+
         public AddEditPage(Service SelectedService)
         {
             InitializeComponent();
             if(SelectedService !=null)
-                _currentServise=SelectedService;
+            {
+                a = true;
+                _currentServise = SelectedService;
+            }
+                
             DataContext = _currentServise;
             
         }
@@ -47,18 +53,52 @@ namespace SemenovaAvtoservice
             {
                 errors.AppendLine("Укажите скидку");
             }
-            if(string.IsNullOrWhiteSpace(_currentServise.DurationIn))
+            if(_currentServise.DurationIn == 0)
             {
                 errors.AppendLine("Укажите длительность услуги");
             }
 
-            if(errors.Length>0)
+            if (_currentServise.DurationIn > 240)
+            {
+                errors.AppendLine("Длительность не может быть больше 240 минут");
+            }
+
+            if (_currentServise.DurationIn < 0)
+            {
+                errors.AppendLine("Длительность не может быть меньше 0 минут");
+            }
+
+            if (errors.Length>0)
             {
                 MessageBox.Show(errors.ToString());
                 return;
             }
-            if (_currentServise.ID == 0)
+            var allServices=Семенова_avroservisEntities.GetContext().Service.ToList();
+            allServices=allServices.Where(p=>p.Title==_currentServise.Title).ToList();
+            if(allServices.Count==0 || a)
+            {
+                if (_currentServise.ID == 0)
+                    Семенова_avroservisEntities.GetContext().Service.Add(_currentServise);
+                try
+                {
+                    Семенова_avroservisEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Информация сохранена");
+                    Manager.MainFrame.GoBack();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Уже существует такая услуга");
+            }
+            /*
+            if (_currentServise.ID == 0 )
                 Семенова_avroservisEntities.GetContext().Service.Add(_currentServise);
+
             try
             {
                 Семенова_avroservisEntities.GetContext().SaveChanges();
@@ -69,6 +109,7 @@ namespace SemenovaAvtoservice
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+            */
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)

@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\Lenovo\source\repos\avtoservice\SemenovaAvtoservice\SemenovaAvtoservice\SemenovaModel.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\Lenovo\Documents\программы\7 лаб\SemenovaAvtoservice\SemenovaAvtoservice\SemenovaModel.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.
